@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi 3D ELC Mikrohidro</title>
+    <!-- Hubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Library WebGL 3D (Three.js) dari CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <div id="ui-layer">
+        <div class="top-panels">
+            <div class="panel" style="width: 260px;">
+                <h1>Simulasi 3D ELC | By Kelompok 1</h1>
+                <label>Tegangan (Volt)</label>
+                <div id="dispVolt" class="stat green">12.00</div>
+                <label>Putaran Poros (RPM)</label>
+                <div id="dispRPM" class="stat blue">100.0</div>
+                <label>Beban Buangan PWM (%)</label>
+                <div id="dispDummy" class="stat yellow">0.0</div>
+            </div>
+            <div class="panel" style="width: 250px;">
+                <h2>Kontrol Interaktif</h2>
+                <label>Debit Air (Daya Kinetik)</label>
+                <input type="range" id="sliderWater" min="0" max="100" value="50">
+                <div id="valWaterFlow" class="stat blue" style="font-size: 1rem;">50%</div>
+                <button id="btnMainLoad" class="on">Lampu Rumah: NYALA (70W)</button>
+            </div>
+        </div>
+        
+
+        <div class="bottom-panels">
+            <div class="panel" style="width: 320px;">
+                <h2>ELC Controller</h2>
+                <label>Status Controller <span id="controllerStatus" style="float: right; color: #4ade80;">STABIL</span></label>
+                <label style="display: flex; justify-content: space-between;">ELC (Dummy Load) <span id="valELC">0.0%</span></label>
+                <input type="range" id="sliderELC" min="0" max="100" step="0.1" value="0" disabled aria-label="Posisi dummy load otomatis oleh ELC">
+            </div>
+        </div>
+    </div>
+    
+    <div id="canvas-container"></div>
+
+    <!-- Hubungkan file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>

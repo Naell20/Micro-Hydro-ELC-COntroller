@@ -1,0 +1,20 @@
+body { margin: 0; overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: white; }
+#canvas-container { width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: 1; }
+#ui-layer { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 10; pointer-events: none; padding: 20px; box-sizing: border-box; display: flex; justify-content: space-between; flex-direction: column; }
+.panel { background: rgba(15, 23, 42, 0.85); border: 1px solid #334155; padding: 15px; border-radius: 10px; pointer-events: auto; backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); }
+.top-panels { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.bottom-panels { display: flex; justify-content: space-between; align-items: flex-end; }
+h1, h2 { margin: 0 0 10px 0; }
+h1 { font-size: 1.2rem; color: #60a5fa; }
+h2 { font-size: 1rem; color: #94a3b8; border-bottom: 1px solid #475569; padding-bottom: 5px; }
+.stat { font-size: 1.8rem; font-weight: bold; font-family: 'Courier New', Courier, monospace; margin-bottom: 10px; }
+.stat.green { color: #4ade80; text-shadow: 0 0 10px rgba(74, 222, 128, 0.5); }
+.stat.red { color: #f87171; text-shadow: 0 0 10px rgba(248, 113, 113, 0.5); }
+.stat.yellow { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.5); }
+.stat.blue { color: #60a5fa; text-shadow: 0 0 10px rgba(96, 165, 250, 0.5); }
+label { display: block; font-size: 0.8rem; color: #cbd5e1; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+input[type=range] { width: 100%; cursor: pointer; margin: 8px 0 15px 0; accent-color: #3b82f6; }
+button { background: #dc2626; color: white; border: none; padding: 12px; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.2s; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4); }
+button.on { background: #16a34a; box-shadow: 0 4px 15px rgba(22, 163, 74, 0.4); }
+button:hover { transform: translateY(-2px); }
+.instruction { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.6); padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; pointer-events: none; border: 1px solid #334155; }
